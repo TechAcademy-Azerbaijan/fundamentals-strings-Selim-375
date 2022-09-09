@@ -4,6 +4,16 @@ prompt.start();
 
 prompt.get('input', function (err, result) {
   
-    // Write code here
-  
+    let input = result.input.split(",");
+    let min = parseInt(input[0]);
+    for (let i = 0; i < input.length; i++) {
+        const element = parseInt(input[i]);
+        if(element<min) {
+            min=element;
+
+
+        }
+    }
+
+  console.log(min)
 });
